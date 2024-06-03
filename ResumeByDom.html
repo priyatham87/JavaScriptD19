@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeUsingDom</title>
+    <style>
+         table,tr,th,td
+        {
+        border:2px solid black;
+        border-collapse:collapse;
+        padding:60px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        h1=document.createElement("h1")
+        hv1=document.createTextNode("RESUME")
+        h1.style.textAlign="center"
+        h1.appendChild(hv1)
+        console.log(h1);
+
+        h2=document.createElement("h1")
+        hv2=document.createTextNode("P.K.V.Sai Priyatham")
+        h2.style.textAlign="center"
+        h2.appendChild(hv2)
+        console.log(h2);
+
+        img=document.createElement("img")
+        img.setAttribute("src","./pspimage.jpeg")
+        img.style.width="200px"
+        img.style.position="relative";
+        img.style.left="43%"
+
+        fs=document.createElement("fieldset")
+        lg=document.createElement("legend")
+        lgc=document.createTextNode("Career Objective")
+        lg.appendChild(lgc)
+        fs.appendChild(lg)
+        p=document.createElement("p")
+        pv=document.createTextNode("Ability to work with Java. Can Work Well Under Pressure and make the best of my abilities to achieve the goals. Passionate individual with good interpersonal and communication skills. Seeking a position in a dynamic organization where I can launch my career and work towards building a strong skill set. A hard working individual looking for a challenging position where I can showcase my skills and contribute to the growth of the organization")
+        p.appendChild(pv)
+        fs.appendChild(p)
+       
+        console.log(fs);
+
+
+        fs1=document.createElement("fieldset")
+        lg1=document.createElement("legend")
+        lgc1=document.createTextNode("Education qualification")
+        lg1.appendChild(lgc1)
+        fs1.appendChild(lg1)
+        data=[
+            {
+                "Qualification":"Btech",
+                "name":"Gudlavalleru Engineering College",
+                "Year Of Passing":"2022",
+                "Stream":"Mechanical",
+                "Percentage":"82%"
+            },
+            {
+                "Qualification":"Intermediate",
+                "name":"svl",
+                "Year Of Passing":"2018",
+                "Stream":"mpc",
+                "Percentage":"86%"
+
+            },
+            {
+                "Qualification":"tenth",
+                "name":"NRl",
+                "Year Of Passing":"2016",
+                "Stream":"general",
+                "Percentage":"87%"
+            }
+        ]
+        table=document.createElement("table")
+        for(i=0;i<data.length;i++)
+  {
+    var tr1=document.createElement("tr")
+   
+var td1=document.createElement("td")
+td1.innerText=data[i].Qualification
+
+var td2=document.createElement("td")
+td2.innerText=data[i].name
+
+var td3=document.createElement("td")
+td3.innerText=data[i].YearOfPassing
+
+var td4=document.createElement("td")
+td4.innerText=data[i].Stream
+
+var td5=document.createElement("td")
+td5.innerText=data[i].Percentage
+
+
+
+  tr1.appendChild(td1)
+  tr1.appendChild(td2)
+  tr1.appendChild(td3)
+  tr1.appendChild(td4)
+  tr1.appendChild(td5)
+  
+
+  table.appendChild(tr1)
+  }
+  fs1.style.position="relative"
+  fs1.style.top="50px"
+  fs1.appendChild(table)
+
+  fs2=document.createElement("fieldset")
+  lg2=document.createElement("legend")
+  lgc2=document.createTextNode("skills")
+  lg2.appendChild(lgc2)
+  fs2.appendChild(lg2)
+  fs2.style.position="relative"
+  fs2.style.top="80px"
+  fs2.style.width="200px"
+  ul=document.createElement("ul")
+  li1=document.createElement("li")
+  li2=document.createElement("li")
+  li3=document.createElement("li")
+  li4=document.createElement("li")
+  li5=document.createElement("li")
+  iteam1=document.createTextNode("HTML")
+  iteam2=document.createTextNode("CSS")
+  iteam3=document.createTextNode("JAVASCRIPT")
+  iteam4=document.createTextNode("JAVA")
+  iteam5=document.createTextNode("SQL")
+  li1.appendChild(iteam1)
+  li2.appendChild(iteam2)
+  li3.appendChild(iteam3)
+  li4.appendChild(iteam4)
+  li5.appendChild(iteam5)
+  ul.appendChild(li1)
+  ul.appendChild(li2)
+  ul.appendChild(li3)
+  ul.appendChild(li4)
+  ul.appendChild(li5)
+  fs2.appendChild(ul)
+
+  fs3=document.createElement("fieldset")
+  lg3=document.createElement("legend")
+  lgc3=document.createTextNode("Hobbies")
+  lg3.appendChild(lgc3)
+  fs3.appendChild(lg3)
+  fs3.style.position="relative"
+  fs3.style.top="100px"
+  fs3.style.width="200px"
+  ul1=document.createElement("ul")
+  li6=document.createElement("li")
+  li7=document.createElement("li")
+  li8=document.createElement("li")
+  iteam6=document.createTextNode("Playing cricket")
+  iteam7=document.createTextNode("Acting")
+  iteam8=document.createTextNode("Writing")
+  li6.appendChild(iteam6)
+  li7.appendChild(iteam7)
+  li8.appendChild(iteam8)
+  ul1.appendChild(li6)
+  ul1.appendChild(li7)
+  ul1.appendChild(li8)
+  fs3.appendChild(ul1)
+
+  fs4=document.createElement("fieldset")
+  lg4=document.createElement("legend")
+  lgc4=document.createTextNode("Declaration")
+  p2=document.createElement("P")
+  p2c=document.createTextNode("I here by declare that all the information mentioned above is true to my knowledge")
+  fs4.style.position="relative"
+  fs4.style.top="120px"
+  fs4.style.width="600px"
+  fs4.appendChild(lg4)
+  lg4.appendChild(lgc4)
+  p2.appendChild(p2c)
+  fs4.appendChild(p2)
+
+
+       document.body.appendChild(h1)
+       document.body.appendChild(h2)
+       document.body.appendChild(img)
+       document.body.appendChild(fs)
+       document.body.appendChild(fs1)
+       document.body.appendChild(fs2)
+       document.body.appendChild(fs3)
+       document.body.appendChild(fs4)
+       
+
+    </script>
+    
+</body>
+</html>
