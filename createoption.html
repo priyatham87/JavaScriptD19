@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown List</title>
+</head>
+<body>
+    <select>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+    </select>
+
+    <script>
+         //assign value to drop down list
+    data=["Hyderabad","Bangalore","Chennai","mumbai"]
+    d=document.getElementsByTagName("option");
+    for(i=0;i<d.length;i++)
+    {  
+     console.log(d[i].innerText=data[i]);   
+    }
+   
+        
+        a=document.createElement("select")
+        b1=document.createElement("option")
+        b2=document.createElement("option")
+        b3=document.createElement("option")
+        b4=document.createElement("option")
+
+        data=["apple","chicken","mutton","biriyani"]
+        b1.innerText=data[0];
+        b2.innerText=data[1];
+        b3.innerText=data[2];
+        b4.innerText=data[3];
+          
+        a.appendChild(b1)
+        a.appendChild(b2)
+        a.appendChild(b3)
+        a.appendChild(b4)
+
+        document.body.appendChild(a)
+        console.log(a);
+  
+    </script>
+    
+</body>
+</html>
